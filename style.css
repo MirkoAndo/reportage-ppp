@@ -4,7 +4,7 @@
    ========================================================================== */
 
 :root {
-  --ivory: #f4f0e8;
+  --ivory: #f0e9e9;
   --ink: #293437;
   --terra: #a76f52;
   --sand: #ddd5c7;
@@ -114,6 +114,13 @@ h2 em {
 /* ==========================================================================
    4. Header & Navigazione
    ========================================================================== */
+
+.fotografica {
+  padding: 0.75rem;
+  border: 1px solid rgba(42, 48, 40, 0.28);
+  background: #d8d5d5;
+  box-shadow: 0 0.75rem 1.75rem rgba(42, 48, 40, 0.16);
+}
 
 .site-header {
   position: relative;
@@ -276,7 +283,7 @@ figcaption {
    ========================================================================== */
 
 .section-grid {
-  display: grid;
+  /*display: grid;*/
   grid-template-columns: 23% 1fr;
   max-width: 1160px;
   margin: auto;
@@ -286,7 +293,7 @@ figcaption {
 
 .section-label {
   display: flex;
-  gap: 1rem;
+  gap: rem;
   align-items: flex-start;
   color: var(--terra);
 }
@@ -330,18 +337,28 @@ figcaption {
 }
 
 .place-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 8vw, 8rem);
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  max-width: 100%;
+}
+
+.place-layout > div {
+  width: 100%;
+}
+
+.place-layout .placeholder {
+  max-width: 100%;
 }
 
 .place-layout figure {
-  margin: 4rem 0 0;
+  margin: 1.5rem 0 0;
+  max-width: 100%;
 }
 
 .place-layout img {
   width: 100%;
-  aspect-ratio: 0.85;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   filter: saturate(0.6);
 }
@@ -359,7 +376,7 @@ figcaption {
 
 .pull-quote {
   font-family: var(--serif);
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   line-height: 0.95;
   color: var(--terra);
 }
